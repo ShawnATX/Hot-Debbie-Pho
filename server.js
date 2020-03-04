@@ -1,6 +1,6 @@
 var express = require("express");
 var path = require("path");
-var tables = require('./lib/table.js')
+var tables = require('./lib/Table.js')
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -33,7 +33,7 @@ app.get("/api/waitlist", function(req, res) {
 });
 
 app.post("/api/clear", function(req, res) {
-  res.json();
+  tables.splice(0, arr.length)
 });
 
 app.post("/reserve", function(req, res) {
