@@ -11,7 +11,19 @@ app.use(express.json());
 
 
 //ROUTES
+//ROUTES
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "view.html"));
+});
 
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "add.html"));
+});
+
+// Displays all characters
+app.get("/", function(req, res) {
+  return res.json(characters);
+});
 
 //STARTER
 app.listen(PORT, function() {
