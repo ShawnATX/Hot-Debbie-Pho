@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Hot Restaurant",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShawnATX/Hot-Debbie-Pho.git"
