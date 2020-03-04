@@ -33,7 +33,7 @@ app.get("/api/waitlist", function(req, res) {
 });
 
 app.post("/api/clear", function(req, res) {
-  res.json();
+  tables.splice(0, arr.length)
 });
 
 app.post("/reserve", function(req, res) {
