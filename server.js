@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path");
 var tables = require('./lib/Table.js')
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 420;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,6 +37,12 @@ app.post("/api/clear", function(req, res) {
 });
 
 app.post("/reserve", function(req, res) {
+  const unique = Math.floor(Math.random() *10);
+  const newTable = req.body;
+  console.log(newTable);
+  let table = new Table(newTable.name, newTable.phone, newTable.email, newTable.partySize, unique)
+
+
 });
 
 
