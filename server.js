@@ -25,12 +25,20 @@ app.get("/reserve", function(req, res) {
 });
 
 app.get("/api/tables", function(req, res) {
-  res.json();
+  res.json(tables);
 });
 
 app.get("/api/waitlist", function(req, res) {
+  res.json(waitlist);
+});
+
+app.post("/api/clear", function(req, res) {
   res.json();
 });
+
+app.post("/reserve", function(req, res) {
+});
+
 
 //STARTER
 app.listen(PORT, function() {
