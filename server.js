@@ -13,7 +13,7 @@ app.use(express.json());
 //ROUTES
 //ROUTES
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "view.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/", function(req, res) {
