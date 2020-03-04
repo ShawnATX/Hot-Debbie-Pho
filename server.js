@@ -1,6 +1,6 @@
 var express = require("express");
 var path = require("path");
-var tables = require('./lib/table.js')
+var tables = require('./lib/Table.js')
 var app = express();
 var PORT = process.env.PORT || 3000;
 
