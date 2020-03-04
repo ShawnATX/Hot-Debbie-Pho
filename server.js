@@ -8,21 +8,28 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //DATA
+var tables = [];
+var waitlist = [];
 
-
-//ROUTES
 //ROUTES
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "add.html"));
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "tables.html"));
 });
 
-// Displays all characters
-app.get("/", function(req, res) {
-  return res.json(characters);
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
+app.get("/api/tables", function(req, res) {
+  res.json();
+});
+
+app.get("/api/waitlist", function(req, res) {
+  res.json();
 });
 
 //STARTER
