@@ -1,0 +1,20 @@
+{
+  "name": "hdp",
+  "version": "1.0.0",
+  "description": "Hot Restaurant",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShawnATX/Hot-Debbie-Pho.git"
+  },
+  "author": "Us",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShawnATX/Hot-Debbie-Pho/issues"
+  },
+  "homepage": "https://github.com/ShawnATX/Hot-Debbie-Pho#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
