@@ -1,6 +1,6 @@
 var express = require("express");
 var path = require("path");
-var tables = require('./lib/Table.js')
+var Table = require('./lib/Table.js')
 var app = express();
 var PORT = process.env.PORT || 420;
 
@@ -41,9 +41,14 @@ app.post("/api/clear", function(req, res) {
 app.post("/reserve", function(req, res) {
   const unique = Math.floor(Math.random() *100);
   const newTable = req.body;
-  console.log(newTable);
   let table = new Table(newTable.name, newTable.phone, newTable.email, newTable.partySize, unique)
-
+  if (tables.length <= 5) {
+    tables.push(table);
+  }
+  else {
+    waitlist.push(table);
+  }
+  console.log(tables);
 });
 
 

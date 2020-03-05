@@ -11,11 +11,9 @@
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
-
   <div class="container">
     <div class="jumbotron">
       <h1 class="text-center"><span class="fa fa-fire"></span>Hot Debby Pho</h1>
@@ -61,7 +59,22 @@
       <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a>
     </p></div>
   </footer>
-<script src="./script.js"></script>
+  <script>
+     $("#reserve-btn").on("click", () => {
+      event.preventDefault();
+      const reservation = {
+        name: $("#reserve-name").val().trim(),
+        phone: $("#reserve-phone").val().trim(),
+        email: $("#reserve-email").val().trim(),
+        partySize: $("#reserve-party").val().trim()
+      }      
+      $.post("/reserve", reservation)
+      .then(function(data) {
+      }).fail(function(err){
+        console.log(err);
+      })
+    });
+  </script>
   </body>
 </html>
 
