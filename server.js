@@ -8,7 +8,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //DATA
-var tables = [];
+var table1 = new Table("greg", "2", "t@t.t", "1", "1")
+var table2 = new Table("name", "phone", "email", "party", "uniqueId")
+var tables = [table1, table2];
 var waitlist = [];
 
 //ROUTES
@@ -37,11 +39,10 @@ app.post("/api/clear", function(req, res) {
 });
 
 app.post("/reserve", function(req, res) {
-  const unique = Math.floor(Math.random() *10);
+  const unique = Math.floor(Math.random() *100);
   const newTable = req.body;
   console.log(newTable);
   let table = new Table(newTable.name, newTable.phone, newTable.email, newTable.partySize, unique)
-
 
 });
 
