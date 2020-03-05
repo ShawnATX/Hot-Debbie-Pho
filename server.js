@@ -8,7 +8,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //DATA
-var tables = [];
+var table1 = new Table("greg", "2", "t@t.t", "1", "1")
+var table2 = new Table("name", "phone", "email", "party", "uniqueId")
+var tables = [table1, table2];
 var waitlist = [];
 
 //ROUTES
