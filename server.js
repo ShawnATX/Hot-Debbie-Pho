@@ -3,7 +3,7 @@ var path = require("path");
 var Table = require('./lib/Table.js')
 var app = express();
 var PORT = process.env.PORT || 420;
-
+var render  = require("./htmlrender")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
