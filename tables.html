@@ -52,7 +52,7 @@
     $.get("/api/tables", (data) => {
       console.log(data);
       for (table in data){
-        let tableNum = (table + 1)
+        let tableNum = (parseInt(table) + parseInt(1))
         console.log(data[table]);
         let nextTable = 
 `<div class="card-body">
