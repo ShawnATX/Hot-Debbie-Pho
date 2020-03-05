@@ -8,8 +8,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //DATA
+<<<<<<< HEAD
 
 var tables = [table1, table2];
+=======
+var tables = [];
+>>>>>>> 8b63c505908516545f410c6c3fb4d14fea16d801
 var waitlist = [];
 
 //ROUTES
