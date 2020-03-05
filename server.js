@@ -3,12 +3,12 @@ var path = require("path");
 var Table = require('./lib/Table.js')
 var app = express();
 var PORT = process.env.PORT || 420;
-
+var render  = require("./htmlrender")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //DATA
-var table1 = new Table("greg", "2", "t@t.t", "1", "1")
+var table1 = new Table("Shawn", "2", "t@t.t", "6", "1")
 var table2 = new Table("name", "phone", "email", "party", "uniqueId")
 var tables = [table1, table2];
 var waitlist = [];
