@@ -51,7 +51,6 @@ app.post("/reserve", function(req, res) {
   console.log(tables);
 });
 
-
 //STARTER
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
