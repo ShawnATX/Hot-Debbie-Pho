@@ -30,10 +30,8 @@
 
       
       $.post("/reserve", data)
-<<<<<<< HEAD
     })
 
-=======
       .then(function(data) {
         console.log("add.html", data);
         alert("Character added!");
@@ -41,4 +39,3 @@
         console.log(err);
       })
   });
->>>>>>> d8ae3b6e05b2298c03f9fd1ab8321fd616d4b925
