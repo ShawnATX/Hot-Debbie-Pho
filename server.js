@@ -39,11 +39,10 @@ app.post("/api/clear", function(req, res) {
 });
 
 app.post("/reserve", function(req, res) {
-  const unique = Math.floor(Math.random() *10);
+  const unique = Math.floor(Math.random() *100);
   const newTable = req.body;
   console.log(newTable);
   let table = new Table(newTable.name, newTable.phone, newTable.email, newTable.partySize, unique)
-
 
 });
 
