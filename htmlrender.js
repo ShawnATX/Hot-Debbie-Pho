@@ -17,12 +17,12 @@ const render = table => {
   
   };
 
-  const renderTable = table => {
+  const renderTable = tables => {
     let template = fs.readFileSync(path.resolve(templatesDir, "card.html"), "utf8");
-    template = replacePlaceholders(template, "name", table.getName());
-    template = replacePlaceholders(template, "phone", table.getPhone());
-    template = replacePlaceholders(template, "email", table.getEmail());
-    template = replacePlaceholders(template, "party", table.getParty());
+    template = replacePlaceholders(template, "name", tables.getName());
+    template = replacePlaceholders(template, "phone", tables.getPhone());
+    template = replacePlaceholders(template, "email", tables.getEmail());
+    template = replacePlaceholders(template, "party", tables.getParty());
     return template;
   };
   
