@@ -30,7 +30,9 @@
         partySize: $("#reserve-party").val().trim()
       }
       
-      $.post("/reserve", reservation)
+      $.post("/reserve", data)
+    })
+
       .then(function(data) {
         //console.log("add.html", data);
       }).fail(function(err){
