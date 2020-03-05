@@ -30,7 +30,7 @@
             <h4>Table Reservations</h4>
         </div>
         <div class="card-body">
-            <form role="form">
+            <form role="form" id="form">
                 <div class="form-group">
                     <label for="reserve-name">Name</label>
                     <input type="text" class="form-control" id="reserve-name">
@@ -47,7 +47,7 @@
                     <label for="reserve-party">Party</label>
                     <input type="text" class="form-control" id="reserve-party">
                 </div>
-                <button type="submit" id="reserve-btn" class="btn btn-primary submit">submit</button>
+                <button type="submit" id="reserve-btn" class="btn btn-primary submit">Submit</button>
             </form>
         </div>
     </div>
@@ -65,12 +65,13 @@
         phone: $("#reserve-phone").val().trim(),
         email: $("#reserve-email").val().trim(),
         partySize: $("#reserve-party").val().trim()
-      }      
+      }    
       $.post("/reserve", reservation)
       .then(function(data) {
       }).fail(function(err){
         console.log(err);
-      })
+      }) 
+      document.getElementById('form').reset();
     });
   </script>
   </body>
