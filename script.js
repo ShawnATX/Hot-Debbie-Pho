@@ -28,7 +28,6 @@
         phone: $("#reserve-phone").val().trim(),
         email: $("#reserve-email").val().trim(),
         partySize: $("#reserve-party").val().trim()
-
       }
       
       $.post("/reserve", reservation)
