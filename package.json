@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ShawnATX/Hot-Debbie-Pho#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
